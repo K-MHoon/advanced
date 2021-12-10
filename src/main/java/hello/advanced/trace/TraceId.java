@@ -21,15 +21,15 @@ public class TraceId {
     }
 
     // 앞 8자리만 사용한다.
-    private String createId() {
+    public String createId() {
         return UUID.randomUUID().toString().substring(0,8);
     }
 
-    private TraceId createNextId() {
+    public TraceId createNextId() {
         return new TraceId(id, level + 1);
     }
 
-    private TraceId createPreviousId() {
+    public TraceId createPreviousId() {
         return new TraceId(id, level - 1);
     }
 
