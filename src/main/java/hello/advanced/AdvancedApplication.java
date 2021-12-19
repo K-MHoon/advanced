@@ -1,13 +1,6 @@
 package hello.advanced;
 
-import hello.advanced.proxy.config.AppV1Config;
-import hello.advanced.proxy.config.AppV2Config;
-import hello.advanced.proxy.config.ProxyFactoryConfigV1;
-import hello.advanced.proxy.config.ProxyFactoryConfigV2;
-import hello.advanced.proxy.config.v1_proxy.ConcreteProxyConfig;
-import hello.advanced.proxy.config.v1_proxy.InterfaceProxyConfig;
-import hello.advanced.proxy.config.v2_dynamicproxy.DynamicProxyBasicConfig;
-import hello.advanced.proxy.config.v2_dynamicproxy.DynamicProxyFilterConfig;
+import hello.advanced.proxy.config.v4_postprocessor.BeanPostProcessorConfig;
 import hello.advanced.trace.logtrace.LogTrace;
 import hello.advanced.trace.logtrace.ThreadLocalLogTrace;
 import org.springframework.boot.SpringApplication;
@@ -21,7 +14,8 @@ import org.springframework.context.annotation.Import;
 //@Import(DynamicProxyBasicConfig.class)
 //@Import(DynamicProxyFilterConfig.class)
 //@Import(ProxyFactoryConfigV1.class)
-@Import(ProxyFactoryConfigV2.class)
+//@Import(ProxyFactoryConfigV2.class)
+@Import(BeanPostProcessorConfig.class)
 @SpringBootApplication(scanBasePackages = "hello.advanced.proxy.app")
 public class AdvancedApplication {
 
